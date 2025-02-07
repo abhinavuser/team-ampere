@@ -43,7 +43,6 @@ class BasicObjectDetection:
         # Get object detection prediction
         prediction = self.model.predict(np.expand_dims(normalized, axis=0))[0]
         x, y, w, h = prediction
-
         # Convert predictions to pixel coordinates
         frame_h, frame_w = frame.shape[:2]
         box_x = int(x * frame_w)
