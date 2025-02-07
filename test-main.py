@@ -18,8 +18,6 @@ class SmallRobotCar:
         self.camera = cv2.VideoCapture(0)
         self.camera.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
         self.camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
-
-        # Create and compile the model
         self.model = self.build_simple_model()
 
     def build_simple_model(self):
